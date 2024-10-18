@@ -8,6 +8,7 @@ export default async function BooksPage({ searchParams }) {
   const wrangledBooks = books.rows;
   console.log(wrangledBooks);
 
+  //wrangledBooks.sort if (anon function (a,b) a.title.localeCompare(b)// else if the opposite
   if (searchParams.sort === "desc") {
     wrangledBooks.reverse();
   }
