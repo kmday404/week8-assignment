@@ -2,10 +2,10 @@ import pg from "pg";
 
 function connect() {
   const dbConnectionString = process.env.NEXT_PUBLIC_DATABASE_URL;
-  const db = new pg.Pool({
+  const database = new pg.Pool({
     connectionString: dbConnectionString,
   });
-  return db;
+  return database;
 }
 
-export const db = connect();
+export const database = connect();

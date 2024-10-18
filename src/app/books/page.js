@@ -1,9 +1,10 @@
-import { db } from "@/utils/dbConnection";
+import { database } from "@/utils/dbConnection";
 import Link from "next/link";
+import Header from "@/components/Header";
 
 export default async function BooksPage({ searchParams }) {
   console.log("searchParams", searchParams);
-  const books = await db.query(`SELECT * FROM books`);
+  const books = await database.query(`SELECT * FROM books`);
   console.log(books);
   const wrangledBooks = books.rows;
   console.log(wrangledBooks);
@@ -15,6 +16,7 @@ export default async function BooksPage({ searchParams }) {
 
   return (
     <>
+      <Header />
       <h1>List of Books</h1>
       <h2>The fun never ends!</h2>
       <Link href="/books?sort=asc">Sort ascending</Link> -{" "}
