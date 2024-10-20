@@ -3,10 +3,14 @@ import Link from "next/link";
 export default function Header() {
   return (
     <>
-      <h1>Shelf Talk</h1>
-      <nav>
-        <Link href="/">Home</Link>
-        <Link href="/books">Books</Link>
+      <h1 className="flex flex-col items-center text-4xl">Shelf Talk</h1>
+      <nav className="flex justify-around content-around text-3xl">
+        <Link href="/" className="">
+          Home
+        </Link>
+        <Link href="/books" className="">
+          Books
+        </Link>
         {/* <Link href="/about">About</Link>
         <Link href="/contact">Contact</Link> */}
       </nav>

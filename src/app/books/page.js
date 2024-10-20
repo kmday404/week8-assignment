@@ -17,8 +17,10 @@ export default async function BooksPage({ searchParams }) {
   return (
     <>
       <Header />
-      <h1>List of Books</h1>
-      <h2>The fun never ends!</h2>
+      <h1 className="flex flex-col items-center">Books we love</h1>
+      <h2 className="flex flex-col items-center">
+        Click on the book title to see it's reviews and leave your own
+      </h2>
       <Link href="/books?sort=asc">Sort ascending</Link> -{" "}
       <Link href="/books?sort=desc">Sort descending</Link>
       {wrangledBooks.map((books) => (

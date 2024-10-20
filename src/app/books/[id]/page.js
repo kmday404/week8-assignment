@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import { database } from "@/utils/dbConnection";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import Footer from "@/components/Footer";
 
 export default async function Connect({ params }) {
   const db = new pg.Pool({
@@ -58,20 +59,24 @@ export default async function Connect({ params }) {
     <div>
       <Header />
       {books.map((book) => (
-        <div key={book.id}>
-          <h2>{book.title}</h2>
-          <p>{book.author}</p>
-          <p>{book.genre}</p>
+        <div key={book.id} className="p-20">
+          <h2>TITLE: {book.title}</h2>
+          <p>AUTHOR: {book.author}</p>
+          <p>GENRE: {book.genre}</p>
         </div>
       ))}
       {comments.map((comment) => (
-        <div key={comment.id}>
-          <p>{comment.id}</p>
-          <p>{comment.name}</p>
-          <p>{comment.comment}</p>
+        <div
+          key={comment.id}
+          className="rounded-lg border-2 gap-y-4 hover:gap-y-6"
+        >
+          <p className="flex justify-end m-2">{comment.id}</p>
+          <p className="flex justify-center w-full">{comment.name}</p>
+          <p className="flex justify-center w-full">{comment.comment}</p>
         </div>
       ))}
-      <form action={handleSubmit} className="flex flex-col items-center">
+      <form action={handleSubmit} className="flex flex-col items-center p-10">
+        <p>If you would like to leave a review please enter the following:</p>
         <label htmlFor="name">Your name:</label>
         <input type="text" id="name" name="name" required />
         <label htmlFor="comment">Your comments:</label>
@@ -92,7 +97,12 @@ export default async function Connect({ params }) {
         >
           Delete
         </button>
+        <p>
+          (your comment number can be found in the right-hand-corner of your
+          comment)
+        </p>
       </form>
+      <Footer />
     </div>
   );
 }
