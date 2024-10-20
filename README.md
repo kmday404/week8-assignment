@@ -5,7 +5,7 @@
 - Create a SQL schema for a posts table and a comments table, with the comments being connected to the posts table with a foreign key.  
   Two tables created and linked.
   - Please submit your database schema, as is mentioned in the submission instructions.  
-    screenshot added below
+    Screenshot added below
 - Create a delete button on posts that allows users to delete the post from the database.  
   Users are able to delete comments
 - Create a form which saves comments to a dedicated comments table, with the comments being connected to the posts table with a foreign key.  
