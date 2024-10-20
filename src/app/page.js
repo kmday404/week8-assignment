@@ -11,17 +11,17 @@ export default function HomePage() {
         Welcome to Shelf Talk
       </h1>
       <p className="p-10">
-        Discover a world of books, reviews, and recommendations! Whether you're
-        a casual reader or a dedicated bookworm, this is the perfect place to
-        explore new titles, revisit old favorites, and share your thoughts.
-        Here, you can:
+        Discover a world of books, reviews, and recommendations! Whether
+        you&apos;re a casual reader or a dedicated bookworm, this is the perfect
+        place to explore new titles, revisit old favorites, and share your
+        thoughts. Here, you can:
         <ul>
           <li>Browse our growing list of books across all genres.</li>
-          <li>Read and leave reviews for the books you've read.</li>
+          <li>Read and leave reviews for the books you&apos;ve read.</li>
           <li>Sort books to find the next great read!</li>
         </ul>
-        Join the conversation and let's build a community of readers who love to
-        share, discuss, and discover amazing stories!
+        Join the conversation and let&apos;s build a community of readers who
+        love to share, discuss, and discover amazing stories!
       </p>
       <Image
         src={bgbooks}

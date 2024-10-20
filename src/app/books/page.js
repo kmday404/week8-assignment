@@ -19,7 +19,7 @@ export default async function BooksPage({ searchParams }) {
       <Header />
       <h1 className="flex flex-col items-center">Books we love</h1>
       <h2 className="flex flex-col items-center">
-        Click on the book title to see it's reviews and leave your own
+        Click on the book title to see it&apos;s reviews and leave your own
       </h2>
       <Link href="/books?sort=asc">Sort ascending</Link> -{" "}
       <Link href="/books?sort=desc">Sort descending</Link>

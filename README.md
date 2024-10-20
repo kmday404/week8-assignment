@@ -28,7 +28,7 @@ My stretch Goals
 
 Resources Used
 
-- google, e.g. apostrophe in SQL table is a doube ''
+- google, e.g. apostrophe in SQL table is a doube apostrophe
 - tailwindcss.com
 - the tailwind cheatsheet
 - class demos
